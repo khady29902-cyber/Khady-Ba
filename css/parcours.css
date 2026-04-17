@@ -1,0 +1,105 @@
+
+
+body{
+    background-color:  #e0c7cc;
+}
+header {
+    background-color:#f08ab9;
+    padding: 5px;
+    border: 2px solid #0c0c0c;
+    top: 0;
+    border-radius: 10%;
+
+   
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #111;
+    font-weight: 600;
+    border-bottom: 2px solid #ed1a7c;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #191818;
+    color: #888;
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.title {
+    font-size: 2rem;
+    color: #111;
+    letter-spacing: 1px;
+}
+fieldset{
+    border-color: #f170b1;
+    border-radius: 5%;
+}
+/* --- Style général de la liste dans le pied de page --- */
+.footer-links {
+    list-style: none; /* Supprime les puces de liste */
+    padding: 0;
+    margin: 20px 0 0 0; /* Ajoute de l'espace au-dessus de la liste */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center; /* Centre la liste horizontalement */
+    gap: 10px; /* Espace uniforme entre chaque lien */
+}
+
+/* --- Style de base des liens (<a>) dans le footer --- */
+.footer-links a {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: #ccc; /* Couleur de texte gris clair par défaut (plus doux que le blanc) */
+    display: flex;
+    align-items: center; /* Aligne l'icône et le texte verticalement */
+    gap: 8px; /* Espace entre l'icône et le texte */
+    transition: all 0.3s ease; /* Transition douce pour l'effet hover */
+    font-size: 0.9rem; /* Légèrement plus petit pour le footer */
+}
+
+/* --- Style des icônes dans les liens --- */
+.footer-links img {
+    width: 16px; /* Taille fixe pour les icônes */
+    height: 16px;
+    opacity: 0.8; /* Légèrement transparent par défaut */
+    transition: opacity 0.3s ease;
+}
+
+/* ==========================================================
+   L'EFFET HOVER (Au survol de la souris)
+   ========================================================== */
+.footer-links a:hover {
+    color: var(--manga-pink, #ff69b4); /* Change la couleur du texte au survol (utilise ta variable si elle existe) */
+    transform: translateX(5px); /* Petit décalage vers la droite pour l'effet visuel */
+}
+
+.footer-links a:hover img {
+    opacity: 1; /* Icône devient totalement opaque au survol */
+}

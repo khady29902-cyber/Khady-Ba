@@ -1,0 +1,199 @@
+/* 1. Configuration des couleurs : Palette Rose Poudré & Or */
+:root {
+  --accent: #d4a373;       
+  --primary: #e5989b;      
+  --primary-dark: #b5838d; 
+  --soft-bg: #e0c7cc;     
+  --text-main: #6d597a;   
+}
+
+/* 2. Style global du corps - Tailles réduites */
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-color: var(--soft-bg);
+  color: var(--text-main);
+  padding: 15px; /* Réduit de 40px à 25px */
+  line-height: 1.4;
+}
+
+/* 3. Style des titres - Plus fins */
+h2, h3 {
+  color: var(--primary-dark);
+  border-left: 3px solid var(--primary); /* Bordure plus fine */
+  padding-left: 10px;
+  margin-top: 25px;
+  font-size: 1.2rem; /* Taille réduite */
+  text-transform: none; /* Moins agressif que l'uppercase */
+  letter-spacing: 0.5px;
+}
+
+/* 4. Mise en page du formulaire - Plus compact */
+form {
+  background: white;
+  padding: 20px; /* Réduit de 30px à 20px */
+  border-radius: 8px; /* Arrondis plus discrets */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  max-width: 600px; /* Réduit de 800px à 600px pour plus de finesse */
+  margin-bottom: 20px;
+}
+
+/* 5. Style des labels et des champs */
+label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem; /* Texte plus petit */
+  margin-bottom: 5px;
+  margin-top: 12px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px 12px; /* Réduit de 12px à 8px */
+  border: 1px solid #f170b1; /* Bordure plus claire */
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+/* Effet focus plus doux */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #fffcfc;
+}
+
+/* 6. Style du bouton - Élégant et fin */
+button, input[type="submit"] {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 20px; /* Plus petit */
+  border-radius: 20px; /* Bouton arrondi style "pilule" très féminin */
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: var(--primary-dark);
+  letter-spacing: 1px; /* Petit effet chic au survol */
+}
+
+/* 7. Zone de recherche */
+.search-container {
+  display: flex;
+  gap: 8px;
+  max-width: 400px;
+}
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.title {
+    font-size: 2rem;
+    color: #111;
+    letter-spacing: 1px;
+}
+/* --- Header & Nav --- */
+header {
+    background-color:#f08ab9;
+    padding: 2px;
+    border: 2px solid #0c0c0c;
+    top: 0;
+    border-radius: 10%;
+   
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #111;
+    font-weight: 600;
+    border-bottom: 2px solid #ed1a7c;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #191818;
+    color: #888;
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0;
+}
+/* --- Style général de la liste dans le pied de page --- */
+.footer-links {
+    list-style: none; /* Supprime les puces de liste */
+    padding: 0;
+    margin: 20px 0 0 0; /* Ajoute de l'espace au-dessus de la liste */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center; /* Centre la liste horizontalement */
+    gap: 10px; /* Espace uniforme entre chaque lien */
+}
+
+/* --- Style de base des liens (<a>) dans le footer --- */
+.footer-links a {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: #ccc; /* Couleur de texte gris clair par défaut (plus doux que le blanc) */
+    display: flex;
+    align-items: center; /* Aligne l'icône et le texte verticalement */
+    gap: 8px; /* Espace entre l'icône et le texte */
+    transition: all 0.3s ease; /* Transition douce pour l'effet hover */
+    font-size: 0.9rem; /* Légèrement plus petit pour le footer */
+}
+
+/* --- Style des icônes dans les liens --- */
+.footer-links img {
+    width: 16px; /* Taille fixe pour les icônes */
+    height: 16px;
+    opacity: 0.8; /* Légèrement transparent par défaut */
+    transition: opacity 0.3s ease;
+}
+
+/* ==========================================================
+   L'EFFET HOVER (Au survol de la souris)
+   ========================================================== */
+.footer-links a:hover {
+    color: var(--manga-pink, #ff69b4); /* Change la couleur du texte au survol (utilise ta variable si elle existe) */
+    transform: translateX(5px); /* Petit décalage vers la droite pour l'effet visuel */
+}
+
+.footer-links a:hover img {
+    opacity: 1; /* Icône devient totalement opaque au survol */
+}
+
+fieldset{
+    margin: 2%;
+}
+ 
+nav ul li {
+    width: auto; /* Laisse le mot prendre sa place */
+    min-width: 80px; /* Donne une base stable */
+    text-align: center;}

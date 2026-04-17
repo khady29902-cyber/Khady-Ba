@@ -1,0 +1,294 @@
+/* --- Variables & Reset --- */
+:root {
+    --lavender-primary: #f08ab9; 
+    --lavender-dark: #ed1a7c;    
+    --text-color: #333;          
+    --bg-color: #d8abc5;         
+    --manga-black: #111;         
+    --font-main: 'Poppins', sans-serif;
+    --font-manga: 'Permanent Marker', cursive; /* Police titre style Manga */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* --- Typographie --- */
+.manga-title {
+    font-family: var(--font-manga);
+    font-size: 2.5rem;
+    color: var(--manga-black);
+    letter-spacing: 1px;
+}
+/* LES TITRES */
+h2, h3, h4 {
+    color: var(--manga-black);
+    font-weight: 600;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--lavender-dark);
+    margin: 10px auto 0;
+}
+
+/* --- Header & Nav --- */
+header {
+    background-color: var(--bg-color);
+    padding: 20px 0;
+    border-bottom: 2px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--manga-black);
+    font-weight: 600;
+    border-bottom: 2px solid var(--lavender-dark);
+}
+
+/* --- Section Hero (Héros) --- */
+#hero {
+    padding: 100px 0;
+}
+
+.lavender-bg {
+    background-color: var(--lavender-primary);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    justify-content:center;
+
+}
+
+.hero-text h2 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.hero-video {
+    overflow: hidden;
+    border-radius: 30%; /* Image ronde simple */
+    border: 5px solid var(--bg-color);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* --- Bouton --- */
+.btn-manga {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--manga-black);
+    color: var(--bg-color);
+    text-decoration: none;
+    font-family: var(--font-manga);
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid var(--manga-black);
+}
+
+.btn-manga:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 0 var(--lavender-dark);
+}
+
+/* --- Grille de Projets --- */
+#projets {
+    padding: 80px 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.project-card {
+    background: var(--bg-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+    height: 250px;
+    width: 200%;
+    object-fit: cover; /* Recadre proprement l'image */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h4 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Bordure Style Manga pour les Cartes */
+.manga-border {
+    border: 2px solid #eee;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--manga-black);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Badges Techniques */
+.tech-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: var(--lavender-primary);
+    color: var(--manga-black);
+    font-size: 0.8rem;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-weight: 600;
+}
+
+
+/* --- Divers --- */
+.center { text-align: center; }
+
+.link-simple {
+    text-decoration: none;
+    color: var(--lavender-dark);
+    font-weight: 600;
+}
+
+.link-simple:hover { color: var(--manga-black); }
+
+/* --- Pied de Page --- */
+footer {
+    padding: 40px 0;
+    background-color: var(--manga-black);
+    color: #888;
+    text-align: center;
+    font-size: 0.9rem;
+}
+/* --- Style général de la liste dans le pied de page --- */
+.footer-links {
+    list-style: none; /* Supprime les puces de liste */
+    padding: 0;
+    margin: 20px 0 0 0; /* Ajoute de l'espace au-dessus de la liste */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    align-items: center; /* Centre la liste horizontalement */
+    gap: 10px; /* Espace uniforme entre chaque lien */
+}
+
+/* --- Style de base des liens (<a>) dans le footer --- */
+.footer-links a {
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: #ccc; /* Couleur de texte gris clair par défaut (plus doux que le blanc) */
+    display: flex;
+    align-items: center; /* Aligne l'icône et le texte verticalement */
+    gap: 8px; /* Espace entre l'icône et le texte */
+    transition: all 0.3s ease; /* Transition douce pour l'effet hover */
+    font-size: 0.9rem; /* Légèrement plus petit pour le footer */
+}
+
+/* --- Style des icônes dans les liens --- */
+.footer-links img {
+    width: 16px; /* Taille fixe pour les icônes */
+    height: 16px;
+    opacity: 0.8; /* Légèrement transparent par défaut */
+    transition: opacity 0.3s ease;
+}
+
+/* L'EFFET HOVER (Au survol de la souris) */
+.footer-links a:hover {
+    color: var(--manga-pink, #ff69b4); /* Change la couleur du texte au survol (utilise ta variable si elle existe) */
+    transform: translateX(5px); /* Petit décalage vers la droite pour l'effet visuel */
+}
+
+.footer-links a:hover img {
+    opacity: 1; /* Icône devient totalement opaque au survol */
+}
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text h2 { font-size: 2.2rem; }
+
+    header .container { flex-direction: column; gap: 10px; }
+}
